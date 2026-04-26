@@ -1,0 +1,11 @@
+description: Smart number-session behavior
+
+compatible: "zmk,behavior-num-session"
+
+include: one_param.yaml
+
+properties:
+  "#binding-cells":
+    type: int
+    required: true
+    const: 1

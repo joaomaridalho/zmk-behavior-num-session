@@ -1,0 +1,9 @@
+/ {
+    behaviors {
+        num_session: num_session {
+            compatible = "zmk,behavior-num-session";
+            #binding-cells = <1>;
+            display-name = "Num Session";
+        };
+    };
+};
