@@ -84,7 +84,7 @@ static void activate_num_session(struct active_num_session *num_session) {
 }
 
 static void deactivate_num_session(struct active_num_session *num_session) {
-    zmk_keymap_layer_deactivate(num_session->layer);
+    zmk_keymap_layer_deactivate(num_session->layer, false);
     num_session->is_active = false;
     num_session->is_modified = false;
 }
