@@ -78,11 +78,7 @@ static struct active_num_session *reserve_num_session(uint8_t layer) {
 }
 
 static void activate_num_session(struct active_num_session *num_session) {
-#if IS_ENABLED(CONFIG_ZMK_TRACK_MOMENTARY_LAYERS)
     zmk_keymap_layer_activate(num_session->layer, false);
-#else
-    zmk_keymap_layer_activate(num_session->layer);
-#endif
     num_session->is_active = true;
     num_session->is_modified = false;
 }
