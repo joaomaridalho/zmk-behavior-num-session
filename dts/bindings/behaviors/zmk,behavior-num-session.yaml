@@ -9,3 +9,15 @@ properties:
     type: int
     required: true
     const: 1
+  continue-list:
+    type: array
+    required: false
+    description: |
+      Extra key codes that keep the session active before the first modifier.
+      Applied in addition to ignore-numbers / ignore-alphas.
+  ignore-alphas:
+    type: boolean
+    description: Keep the session active for alphabetic keys (before the first modifier).
+  ignore-numbers:
+    type: boolean
+    description: Keep the session active for numeric keys (before the first modifier).

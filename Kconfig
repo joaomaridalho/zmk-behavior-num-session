@@ -4,3 +4,12 @@ config ZMK_BEHAVIOR_NUM_SESSION
 	bool
 	default y
 	depends on DT_HAS_ZMK_BEHAVIOR_NUM_SESSION_ENABLED
+
+if ZMK_BEHAVIOR_NUM_SESSION
+
+config ZMK_BEHAVIOR_NUM_SESSION_MAX_ACTIVE
+	int "Maximum simultaneous num-session layers"
+	default 10
+	range 1 32
+
+endif
